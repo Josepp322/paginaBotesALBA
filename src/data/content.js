@@ -80,11 +80,11 @@ export const MARCAS = ["Nordic Craft", "Bluewater", "Marea Yachts", "Coastwise",
 export const CONTACT_INFO = {
   phone: "+52 (55) 5555 0100",
   email: "contacto@altamar.mx",
-  locations: "Ciudad de México · Cancún · Puerto Vallarta",
+  locations: "Av. Larco 345, Miraflores, Lima, Perú",
 };
 
 export const TIMELINE = [
-  { year: "1994", text: "Abrimos nuestro primer showroom en Ciudad de México, representando dos marcas europeas." },
+  { year: "1994", text: "Abrimos nuestro primer showroom en Miraflores, representando dos marcas europeas." },
   { year: "2008", text: "Ampliamos operaciones a Cancún y Puerto Vallarta para atender la costa del Pacífico y el Caribe." },
   { year: "2016", text: "Sumamos taller de servicio propio y programa de mantenimiento certificado." },
   { year: "2026", text: "Más de 1,200 embarcaciones entregadas y 9 marcas representadas en todo el país." },
