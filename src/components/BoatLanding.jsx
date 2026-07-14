@@ -460,7 +460,7 @@ function Contacto() {
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="w-4 h-4 text-[#6BB9EC]" />
-              <span>Ciudad de México · Cancún · Puerto Vallarta</span>
+              <span>Av. Larco 345, Miraflores, Lima, Perú</span>
             </div>
           </div>
         </div>
