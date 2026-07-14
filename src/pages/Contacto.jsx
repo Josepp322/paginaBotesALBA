@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
 import PageHeader from "../components/PageHeader";
-import { CONTACT_INFO, ACCENT } from "../data/content";
+import { CONTACT_INFO, ACCENT, PAGE_IMAGES } from "../data/content";
 
 function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -85,11 +85,20 @@ export default function Contacto() {
         eyebrow="Contacto"
         title="Cuéntanos qué embarcación buscas"
         subtitle="Un asesor especializado te contactará en menos de 24 horas para resolver tus dudas y coordinar una visita a nuestras instalaciones."
+        bgImage={PAGE_IMAGES.contactoHeader}
       />
 
       <section className="bg-[#eef7fd] py-20 px-6 md:px-10">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
           <div>
+            <div className="h-56 md:h-64 rounded-2xl overflow-hidden bg-[#245478] relative mb-8">
+              <img
+                src={PAGE_IMAGES.contactoShowroom}
+                alt="Showroom Altamar"
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => (e.currentTarget.style.display = "none")}
+              />
+            </div>
             <p className="text-xs tracking-[0.3em] uppercase text-[#1D6FA5] mb-3">Datos directos</p>
             <h2 className="font-serif text-3xl text-[#123A56] mb-6">Escríbenos o pasa a vernos</h2>
             <p className="text-[#5B7A91] text-sm leading-relaxed mb-10 max-w-md">
@@ -115,8 +124,8 @@ export default function Contacto() {
               href={`https://wa.me/${CONTACT_INFO.phone.replace(/[^\d]/g, "")}`}
               target="_blank"
               rel="noreferrer"
-              className="mt-10 inline-flex items-center justify-center gap-2 text-white text-sm font-semibold rounded-full px-7 py-3 transition-colors w-fit"
-              style={{ backgroundColor: ACCENT.blueVivid }}
+              className="mt-10 inline-flex items-center justify-center gap-2 text-sm font-semibold rounded-full px-7 py-3 transition-colors w-fit"
+              style={{ backgroundColor: ACCENT.blueVivid, color: ACCENT.blueVividText }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVividHover)}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVivid)}
             >

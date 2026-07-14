@@ -160,6 +160,15 @@ export default function Hero({ videoSrc = "", imageSrc = "" }) {
 
           <BottomLeftCard />
           <BottomRightCorner />
+
+          <a
+            href="https://www.linkedin.com/in/alba-ingenier%C3%ADa-de-desarrollo-42a3493ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Br%2F%2FxM0GsTqS3xaRIWRPWvA%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="absolute top-4 right-4 md:top-5 md:right-6 text-[10px] md:text-[11px] text-white/50 hover:text-white/80 tracking-wide transition-colors z-20"
+          >
+            Powered by ALBA
+          </a>
         </div>
       </section>
     </div>

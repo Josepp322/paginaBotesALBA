@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import BoatCard from "../components/BoatCard";
-import { BOATS, BOAT_CATEGORIES, ACCENT } from "../data/content";
+import { BOATS, BOAT_CATEGORIES, ACCENT, PAGE_IMAGES } from "../data/content";
 
 export default function Catalogo() {
   const [activeCategory, setActiveCategory] = useState("Todas");
@@ -19,6 +19,7 @@ export default function Catalogo() {
         ctaLabel="Cotizar con un asesor"
         ctaTo="/contacto"
         ctaAccent="red"
+        bgImage={PAGE_IMAGES.catalogoHeader}
       />
 
       <section className="bg-[#eef7fd] py-16 px-6 md:px-10">
@@ -33,7 +34,7 @@ export default function Catalogo() {
                   className="text-sm px-5 py-2 rounded-full border transition-colors"
                   style={
                     active
-                      ? { backgroundColor: ACCENT.blueVivid, borderColor: ACCENT.blueVivid, color: "white" }
+                      ? { backgroundColor: ACCENT.blueVivid, borderColor: ACCENT.blueVivid, color: ACCENT.blueVividText }
                       : { backgroundColor: "white", borderColor: "rgba(46,134,193,0.25)", color: "#123A56" }
                   }
                 >
@@ -57,12 +58,19 @@ export default function Catalogo() {
         </div>
       </section>
 
-      <section className="bg-white py-20 px-6 md:px-10 border-t border-[#123A56]/10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl text-[#123A56] mb-4">
+      <section className="relative py-24 px-6 md:px-10 overflow-hidden bg-[#1B4965]">
+        <img
+          src={PAGE_IMAGES.catalogoCtaBg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => (e.currentTarget.style.display = "none")}
+        />
+        <div className="absolute inset-0 bg-[#123A56]/80" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-3xl text-white mb-4">
             ¿No encuentras exactamente lo que buscas?
           </h2>
-          <p className="text-[#5B7A91] text-sm md:text-base mb-8 leading-relaxed">
+          <p className="text-white/70 text-sm md:text-base mb-8 leading-relaxed">
             Trabajamos también con pedidos por encargo directo a fábrica. Cuéntanos qué necesitas
             y te armamos una propuesta a la medida.
           </p>

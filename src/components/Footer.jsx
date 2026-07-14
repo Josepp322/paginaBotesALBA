@@ -55,9 +55,17 @@ export default function Footer() {
         <p className="text-xs text-white/40">
           © {new Date().getFullYear()} {BRAND}. Todos los derechos reservados.
         </p>
-        <div className="flex gap-6 text-xs text-white/40">
+        <div className="flex items-center gap-6 text-xs text-white/40">
           <a href="#" className="hover:text-white/70 transition-colors">Aviso de privacidad</a>
           <a href="#" className="hover:text-white/70 transition-colors">Términos y condiciones</a>
+          <a
+            href="https://www.linkedin.com/in/alba-ingenier%C3%ADa-de-desarrollo-42a3493ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Br%2F%2FxM0GsTqS3xaRIWRPWvA%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white/70 transition-colors"
+          >
+            Powered by ALBA
+          </a>
         </div>
       </div>
     </footer>

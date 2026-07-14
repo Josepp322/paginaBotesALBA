@@ -51,20 +51,20 @@ function CatalogoTeaser() {
           </div>
           <Link
             to="/catalogo"
-            className="inline-flex items-center gap-2 text-white text-sm font-semibold rounded-full pl-5 pr-2 py-2 w-fit transition-colors"
-            style={{ backgroundColor: ACCENT.blueVivid }}
+            className="inline-flex items-center gap-2 text-sm font-semibold rounded-full pl-5 pr-2 py-2 w-fit transition-colors"
+            style={{ backgroundColor: ACCENT.blueVivid, color: ACCENT.blueVividText }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVividHover)}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVivid)}
           >
             Ver catálogo completo
-            <span className="bg-white/20 p-1.5 rounded-full flex items-center justify-center">
+            <span className="bg-[#123A56]/10 p-1.5 rounded-full flex items-center justify-center">
               <ArrowRight className="w-4 h-4" />
             </span>
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((b) => (
-            <BoatCard boat={b} key={b.name} accent="blue" />
+            <BoatCard boat={b} key={b.name} accent="red" />
           ))}
         </div>
       </div>
@@ -85,8 +85,8 @@ function CtaBanner() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/nosotros"
-            className="inline-flex items-center justify-center gap-2 text-white text-sm font-semibold rounded-full px-7 py-3 transition-colors"
-            style={{ backgroundColor: ACCENT.blueVivid }}
+            className="inline-flex items-center justify-center gap-2 text-sm font-semibold rounded-full px-7 py-3 transition-colors"
+            style={{ backgroundColor: ACCENT.blueVivid, color: ACCENT.blueVividText }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVividHover)}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = ACCENT.blueVivid)}
           >

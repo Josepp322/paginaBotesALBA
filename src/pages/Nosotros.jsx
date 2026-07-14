@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ShieldCheck, Compass, Award, Star } from "lucide-react";
 import PageHeader from "../components/PageHeader";
-import { WHY, STATS, TESTIMONIALS, TIMELINE, ACCENT } from "../data/content";
+import { WHY, STATS, TESTIMONIALS, TIMELINE, ACCENT, PAGE_IMAGES } from "../data/content";
 
 const ICONS = { ShieldCheck, Compass, Award };
 
@@ -28,25 +28,35 @@ function PorQue() {
 function Historia() {
   return (
     <section className="bg-[#eef7fd] py-24 px-6 md:px-10">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <p className="text-xs tracking-[0.3em] uppercase text-[#1D6FA5] mb-3 text-center">
           Nuestra historia
         </p>
         <h2 className="font-serif text-4xl text-[#123A56] text-center mb-16">
           Más de tres décadas conectando personas con el mar
         </h2>
-        <div className="space-y-10">
-          {TIMELINE.map((t, i) => (
-            <div key={t.year} className="flex gap-6 md:gap-10">
-              <div className="shrink-0 w-16 md:w-24 text-right">
-                <span className="font-serif text-xl md:text-2xl text-[#2E86C1]">{t.year}</span>
+        <div className="grid md:grid-cols-[minmax(0,320px)_1fr] gap-12 md:gap-16 items-start">
+          <div className="md:sticky md:top-28 h-72 md:h-96 rounded-2xl overflow-hidden bg-[#245478] relative">
+            <img
+              src={PAGE_IMAGES.nosotrosEquipo}
+              alt="Nuestro equipo"
+              className="absolute inset-0 w-full h-full object-cover"
+              onError={(e) => (e.currentTarget.style.display = "none")}
+            />
+          </div>
+          <div className="space-y-10">
+            {TIMELINE.map((t) => (
+              <div key={t.year} className="flex gap-6 md:gap-10">
+                <div className="shrink-0 w-16 md:w-24 text-right">
+                  <span className="font-serif text-xl md:text-2xl text-[#2E86C1]">{t.year}</span>
+                </div>
+                <div className="relative pl-6 border-l border-[#2E86C1]/25 pb-2">
+                  <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#2E86C1]" />
+                  <p className="text-sm md:text-base text-[#123A56]/80 leading-relaxed">{t.text}</p>
+                </div>
               </div>
-              <div className="relative pl-6 border-l border-[#2E86C1]/25 pb-2">
-                <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#2E86C1]" />
-                <p className="text-sm md:text-base text-[#123A56]/80 leading-relaxed">{t.text}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -149,6 +159,7 @@ export default function Nosotros() {
         ctaLabel="Ver catálogo"
         ctaTo="/catalogo"
         ctaAccent="blue"
+        bgImage={PAGE_IMAGES.nosotrosHeader}
       />
       <PorQue />
       <Historia />

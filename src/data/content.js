@@ -15,14 +15,27 @@ export const COLORS = {
   slateSoft: "#5B7A91",
 };
 
-// Acentos de alto contraste para botones en páginas internas (catálogo, nosotros, contacto).
-// El inicio se queda con los botones celeste/blanco originales; estos son solo para "empujar" la acción
-// en las páginas interiores, donde ya no hay un video de fondo llamativo.
+// Acentos para botones en todo el sitio.
+// "red" = botón oscuro con texto blanco (acción principal / cotizar, contactar).
+// "blue" = mismo celeste del botón "Agendar cita" del navbar, con texto navy — para que
+// todos los botones azules del sitio (inicio y páginas interiores) se vean consistentes.
 export const ACCENT = {
   red: "#E1483C",
   redHover: "#C93A2F",
-  blueVivid: "#1467C7",
-  blueVividHover: "#1058A6",
+  blueVivid: "#6BB9EC",
+  blueVividHover: "#8FCBF2",
+  blueVividText: "#123A56",
+};
+
+// Rutas de imágenes de las páginas interiores (banners y fotos de sección).
+// Coloca los archivos en /public/images con estos nombres exactos.
+export const PAGE_IMAGES = {
+  catalogoHeader: "/images/page-header-catalogo.jpg",
+  nosotrosHeader: "/images/page-header-nosotros.jpg",
+  contactoHeader: "/images/page-header-contacto.jpg",
+  nosotrosEquipo: "/images/nosotros-equipo.jpg",
+  contactoShowroom: "/images/contacto-showroom.jpg",
+  catalogoCtaBg: "/images/catalogo-cta-bg.jpg",
 };
 
 export const NAV_LINKS = [

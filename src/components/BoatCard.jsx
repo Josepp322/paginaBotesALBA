@@ -4,8 +4,10 @@ import { ChevronRight } from "lucide-react";
 import { ACCENT } from "../data/content";
 
 export default function BoatCard({ boat, accent = "red" }) {
-  const accentBg = accent === "blue" ? ACCENT.blueVivid : ACCENT.red;
-  const accentHover = accent === "blue" ? ACCENT.blueVividHover : ACCENT.redHover;
+  const isBlue = accent === "blue";
+  const accentBg = isBlue ? ACCENT.blueVivid : ACCENT.red;
+  const accentHover = isBlue ? ACCENT.blueVividHover : ACCENT.redHover;
+  const accentText = isBlue ? ACCENT.blueVividText : "white";
 
   return (
     <div className="group border border-[#2E86C1]/15 bg-white flex flex-col">
@@ -25,9 +27,6 @@ export default function BoatCard({ boat, accent = "red" }) {
           <line x1="100" y1="40" x2="100" y2="15" stroke="#6BB9EC" strokeWidth="1.5" />
           <line x1="10" y1="70" x2="190" y2="70" stroke="#6BB9EC" strokeWidth="1.5" />
         </svg>
-        <span className="absolute top-3 left-3 bg-[#123A56]/70 backdrop-blur-sm text-white text-[10px] uppercase tracking-wide px-2.5 py-1 rounded-full">
-          {boat.status}
-        </span>
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-baseline justify-between mb-1">
@@ -50,8 +49,8 @@ export default function BoatCard({ boat, accent = "red" }) {
           <span className="font-serif text-lg text-[#1B4965]">{boat.price}</span>
           <Link
             to="/contacto"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-white px-4 py-2 rounded-full transition-colors"
-            style={{ backgroundColor: accentBg }}
+            className="inline-flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+            style={{ backgroundColor: accentBg, color: accentText }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = accentHover)}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = accentBg)}
           >
